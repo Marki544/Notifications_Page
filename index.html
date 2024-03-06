@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Notifications</title>
+  </head>
+  <body>
+
+
+    <div class="container">
+      
+      <header class="header">
+        
+        <div class="header__left">
+          <h1>Notifications</h1>
+          <div class="notifications_count">
+            <p class="number" id="count">3</p>
+          </div>
+        </div>
+
+        <div class="header__right">
+          <p class="mark_all_as_read" id="mark-all">Mark all as read</p>
+        </div>
+      
+      </header>
+
+      <main class="notifications">
+
+        <div class="notification unseen">
+          <img src="./src/assets/avatar-mark-webber.webp" class="profile_pic">
+          <div class="notification__content">
+            <p class="message"><span class="username">Mark Webber</span> reacted to your recent post <span class="highlight">My first tournament today!</span><span class="red_dot"></span></p>
+            <p class="time">1m ago</p>
+          </div>
+        </div>
+
+        <div class="notification unseen">
+          <img src="./src/assets/avatar-angela-gray.webp" class="profile_pic">
+          <div class="notification__content">
+            <p class="message"><span class="username">Angela Gray</span> followed you<span class="red_dot"></span></p>
+            <p class="time">5m ago</p>
+          </div>
+        </div>
+
+        <div class="notification unseen">
+          <img src="./src/assets/avatar-jacob-thompson.webp" class="profile_pic">
+          <div class="notification__content">
+            <p class="message"><span class="username">Jacob Thompson</span> has joined your group <span class="group_highlight">Chess Club</span> <span class="red_dot"></span></p>
+            <p class="time">1 day ago</p>
+          </div>
+        </div>
+
+        <div class="notification">
+          <img src="./src/assets/avatar-rizky-hasanuddin.webp" class="profile_pic">
+          <div class="notification__content">
+            <p class="message"><span class="username">Rizky Hasanuddin</span> sent you private message<span class="red_dot" style="display: none;"></span></p>
+            <p class="time">5 days ago</p>
+            <div class="message_box">
+              <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="notification">
+          <img src="./src/assets/avatar-kimberly-smith.webp" class="profile_pic">
+          <div class="notification__content">
+            <p class="message"><span class="username">Kimberly Smith</span> commented on your picture <span class="red_dot" style="display: none;"></span></p>
+            <p class="time">1 week ago</p>
+          </div>
+          <img src="./src/assets/image-chess.webp" class="post_picture">
+        </div>
+
+        <div class="notification">
+          <img src="./src/assets/avatar-nathan-peterson.webp" class="profile_pic">
+          <div class="notification__content">
+            <p class="message"><span class="username">Nathan Peterson</span> reacted to your recent post <span class="post_highlight">5 end-game strategies to increase your win rate</span>  <span class="red_dot" style="display: none;"></span></p>
+            <p class="time">2 weeks ago</p>
+          </div>
+        </div>
+
+        <div class="notification">
+          <img src="./src/assets/avatar-anna-kim.webp" class="profile_pic">
+          <div class="notification__content">
+            <p class="message"><span class="username">Anna Kim</span> left the group <span class="group_highlight">Chess Club</span> <span class="red_dot" style="display: none;"></span></p>
+            <p class="time">2 weeks ago</p>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

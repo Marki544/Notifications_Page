@@ -1,0 +1,123 @@
+@use "./utils/variables.scss" as var;
+@use "./utils/mixins.scss" as mix;
+
+.notifications {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .unseen {
+        cursor: pointer;
+        background-color: var.$veryGreyishBlue;
+    }
+
+    .notification {
+        display: flex;
+        width: 345px;
+        min-height: 80px;
+        column-gap: 15px;
+        padding: 0px 15px 15px;
+        border-radius: 12px;
+        padding-top: 15px;
+
+        .profile_pic {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__content {
+
+            .message {
+                font-size: 14px;
+                color: var.$darkGreyishBlue;
+                font-weight: var.$medium;
+            }
+
+            .username {
+                color: var.$veryDarkBlue;
+                font-weight: var.$extraBold;
+            }
+
+            .highlight {
+                font-weight: var.$extraBold;
+            }
+
+            .group_highlight {
+                font-weight: var.$extraBold;
+                color: var.$blue;
+                margin-left: 3px;
+            }
+
+            .red_dot {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: var.$red;
+                margin-left: 7px;
+            }
+
+            .time {
+                font-size: 14px;
+                color: var.$greyishBlue;
+                font-weight: var.$medium;
+                margin-top: 5px;
+            }
+
+            .message_box {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 120px;
+                border: 1px solid var.$darkGreyishBlue;
+                border-radius: 5px;
+                margin-top: 13px;
+                
+                p {
+                    margin-left: 15px;
+                    font-size: 14px;
+                    width: 215px;
+                    font-weight: var.$medium;
+                    color: var.$darkGreyishBlue;
+                }
+            }
+
+            .post_highlight {
+                font-weight: var.$extraBold;
+            }
+        }
+
+        .post_picture {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+@include mix.breakpoint(medium) {
+    .notifications {
+        width: 100%;
+        padding: 0px 30px;
+
+        .notification {
+            width: 100%;
+
+            &__content {
+                width: 100%;
+
+                .message_box {
+                    width: 100%;
+                    height: 95px;
+                    padding: 0px 20px;
+
+                    p {
+                        width: 100%;
+                        font-size: 1rem;
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
